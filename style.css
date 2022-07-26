@@ -1,0 +1,120 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+    /* color: white; */
+}
+body{
+    display: grid;
+    place-content: center;
+    margin-top: 50px;
+}
+main{
+    border-radius: 10px;
+    color: white;
+    position: relative;
+    background-color: black;
+    width:500px;
+    padding: 10px;
+    /* text-align: center; */
+}
+#head{
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 1px solid red;
+    /* width: 100%; */
+}
+.date{
+    text-align: center;
+    padding-top: 15px;
+    font-size: 70px;
+    padding-bottom: 15px;
+}
+.alarm-container{
+    height: 400px;
+}
+.add{
+    /* display: ; */
+    /* width: 30px; */
+    display: grid;
+    margin: 0 auto;
+    /* place-content: center;
+    text-align: center; */
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+.alarm{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px 20px 20px;
+}
+.form{
+    background-color: red;
+    color: unset;
+    width: 250px;
+    height: 200px;
+    top: 200px;
+    bottom: 0px;
+    left: 100px;
+    padding: 30px;
+    right: 100px;
+    z-index: 1;
+    border-radius: 30px;
+    position: absolute;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.input{
+    padding: 40px 0;
+    color: black;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+
+}
+.input input{
+    outline: none;
+    text-align: center;
+    border: none;
+    width: 100px;
+    height: 50px;
+    border-radius: 20px;
+}
+select{
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+}
+.hidden {
+    transform: translateY(-30rem);
+    height: 0;
+    padding: 0 2.25rem;
+    margin-bottom: 0;
+    opacity: 0;
+}
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    background:black;
+    background:rgba(0,0,0,0.8);
+
+    filter:blur(4px);
+    -o-filter:blur(4px);
+    -ms-filter:blur(4px);
+    -moz-filter:blur(4px);
+    -webkit-filter:blur(4px);
+}
+.cancel,.mark,.svg{
+    cursor: pointer;
+}
