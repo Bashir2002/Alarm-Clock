@@ -46,7 +46,8 @@ class App{
 
         timeString = `${hours} : ${minutes} ${zone}` 
         this._delete()
-        setInterval( this._checkAlarms(timeString),60000 );
+        // this._checkAlarms(timeString)
+         setInterval( this._checkAlarms(timeString),60000 );
         date.innerHTML = timeString
         // head.innerHTML = "Alarm"
         // this._checkAlarms(timeString);
@@ -79,7 +80,7 @@ class App{
         } else 
         { alert("Please enter a valid hour");}
         this._delete()
-        setInterval( this._checkAlarms(timeString),60000 );
+        // setInterval( this._checkAlarms(timeString),000 );
 
     }
     _renderAlarm(newAlarm){
