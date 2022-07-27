@@ -15,6 +15,8 @@ const zone = document.querySelector('.zone');
 let timeString,mad,index;
 let alarmArray = [];
 
+date.innerHTML = "00 : 00"
+
 class Alarm{
     id = (Date.now() + '').slice(0,10);
     constructor(Hour,minutes,zone){
@@ -64,13 +66,13 @@ class App{
         inputMinutes.value = inputHours.value  = '';
     }
     _addAlarm(e){
-
+        e.preventDefault();
       const  alarmMinutes = inputMinutes.value.padStart(2, '0');
        const alarmHour = inputHours.value.padStart(2, '0');
       const  alarmZone = zone.value
         let newAlarm;
         
-        if(alarmHour > 0 && alarmHour <= 12 && alarmMinutes > 0 && alarmMinutes <= 60){
+        if(alarmHour > 0 && alarmHour <= 12 && alarmMinutes >= 0 && alarmMinutes <= 60){
             newAlarm = new Alarm(alarmHour, alarmMinutes, alarmZone);
             alarmArray.push(newAlarm); 
             
@@ -79,9 +81,7 @@ class App{
             this._local();
         } else 
         { alert("Please enter a valid hour");}
-        this._delete()
-        // setInterval( this._checkAlarms(timeString),000 );
-
+        this._delete();
     }
     _renderAlarm(newAlarm){
         const html = `
